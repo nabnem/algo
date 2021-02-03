@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+  // FONCTION qui s'appelle  retourneMot  et qui prend en parametre une chaine de caratere et qui l afiche a l envers
+         
+ str = "salut les amis coucou"
+
+function retourneMot (str) {
+    let newWord= "";
+    let i = 0;
+    strLength = str.length-1
+    while (i< strLength){
+        console.log(strLength)
+        i++
+    }
+
+    while (i > 0 ) {
+        i--
+        newWord = newWord + str[i]
+        
+    }
+    console.log(newWord)
+
+
+}
+
+retourneMot (str)
+
+
+</script>
+</head>
+
+<body></body>
+</html>

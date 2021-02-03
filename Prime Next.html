@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+<script>
+
+    //  fonction PRIME NEXT
+      // Écrire une fonction qui renvoie le nombre premier immédiatement supérieur ou égal au nombre passé en paramètre
+
+       function primeNext (num){
+          let resultat = 0
+
+           for (let i= 1; i<num; i++){
+          if (num == 2){
+               resultat = num;
+         } else if (num %2 != 0 ){
+              resultat = num;
+               return num
+          }
+       }
+
+       console.log(resultat)
+      }
+
+       console.log(primeNext(3));
+
+
+
+
+      // function  nombrePremier (num){
+
+      //     if ( num %2 != 0 ){
+      //         return num
+
+      //     } else {
+      //       num++
+
+      //     }
+      //      return num+1
+
+      // }
+      // console.log(nombrePremier(9))
+
+      // function nbrPremier(nbr) {
+      //   for(let i = 2; i < nbr; i++)
+      //     if(nbr%i === 0)
+      //     return false;
+      //     return true;
+      // }
+      // // console.log(nbrPremier(9));
+
+
+
+      // function primeNext (num){
+      //     let resultat = 0
+
+      //     for (let i= 2; i<num; i++) {
+      //         if (num %2 != 0 ){
+      //             resultat = num;
+      //             return num
+
+      //         }  else {
+      //         num ++
+      //             nbrPremier(num)
+
+      //         }
+
+      //     }
+      //     return num
+      // }
+      // console.log(primeNext(9));
+      
+
+
+  
+  
+
+     
+
+
+    </script>
+  </head>
+
+  <body></body>
+</html>
+

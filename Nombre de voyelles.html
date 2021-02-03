@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+//fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles: methode1
+      const str = "bonjour les amis"
+       let count = 0;
+         function alphabet(str, ) {
+                  for( i=0; i < str.length; i++){
+  
+                      let voyelle = str.charAt(i);
+  
+                      if  (voyelle =="a" || voyelle  == "e" || voyelle  == "i" || voyelle == "o"|| voyelle  == "u"){
+                          count ++ ;
+                      }
+  
+                  }
+                 console.log(count)
+              }
+  
+              alphabet("bonjour les amis")
+
+//fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles : methode2 avec includes
+
+
+      /*const vowels = ["a", "e", "i", "o", "u"] 
+        const str = "bonjour"
+    function countVowel(str) {
+ 
+    let count = 0;
+    for (let letter of str) {
+    if (vowels.includes(letter)) {
+        count++;
+    }
+}
+
+return count
+}
+
+const result = countVowel(str);
+
+console.log(result);*/
+
+// //fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles : methode3 avec indexOf (methode prof)
+      //      const str ="bonjour"
+      //      const voyelle_list = 'aeiouyAEIOUY'
+      //      let cpt = 0
+
+      // function voyelle(str) {
+
+      //      for (let i = 0; i < str.length; i++) {
+      //        if (voyelle_list.indexOf(str[i]) !== -1) {
+      //          cpt += 1
+      //        }
+      //      }
+      //      return cpt
+      //    }
+      //   console.log(voyelle(str))
+
+      // methode de barbara
+      // let phrase = "Le monde est beau";
+      //         let voyelle = "aeiouy";
+      //         let count = 0;
+      // function compte (phrase) {
+
+      //         for (i = 0; i < phrase.length; i++) {
+      //             let index = voyelle.indexOf(phrase[i]);
+      //             //console.log(index);
+      //             if (index !== -1) {
+      //                 count++
+      //             }
+      //         } return count
+
+      //     }
+      //     console.log(compte(phrase))
+
+
+</script>
+</head>
+
+<body></body>
+</html>

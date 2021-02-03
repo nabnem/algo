@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      /*function test() {
+            console.log("okokokok")
+            // Ecrire une fonction qui prend en parametre une chaine de string et qui nous renvoi cette meme chaine avec les premieres lettres du mots en maj
+            //const str = "Bonjour les nouveaux dev"
+​
+​
+            function maj(str, ) {
+                const array = str.split(' ')
+                const newArray = []
+​
+                for(x=0; x<array.length; x++) {
+                    newArray.push(array[x].charAt(0).toUpperCase() + array[x].slice(1))
+                }
+                console.log("voici la fonction Capitalize",newArray.join(' ') )
+                return newArray.join('')
+​
+            }
+            maj('Bonjour les nouveaux dev')
+        document.getElementById("Magic code").innerHTML = "Click et tu verra";
+        }*/
+
+      //fonction pour remettre une chaine de caractere par ordre alphabétique
+      /* function sortAlphabet(str) {
+             return [...str].sort((a, b) => a.localeCompare(b)).join("");
+             }
+ 
+         console.log(sortAlphabet("bonjour")); */
+
+      //fonction qui prend en parametre une chaine de caractere et qui remet cette meme chaine par ordre alpha:METHODE2
+      /* const str = "bonjour"
+         function alphabet(str, ) {
+                 const array = str.split('').sort()
+                 const newArray = []
+                 console.log(array.join(''))
+                 return newArray.join('')
+             }
+ 
+             alphabet("bonjour")*/
+
+      //fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles: methode1
+      //const str = "bonjour les amis"
+      /* let count = 0;
+         function alphabet(str, ) {
+                  for( i=0; i < str.length; i++){
+  
+                      let voyelle = str.charAt(i);
+  
+                      if  (voyelle =="a" || voyelle  == "e" || voyelle  == "i" || voyelle == "o"|| voyelle  == "u"){
+                          count ++ ;
+                      }
+  
+                  }
+                 console.log(count)
+              }
+  
+              alphabet("bonjour les amis")*/
+
+      //fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles : methode2 avec includes
+      /*const vowels = ["a", "e", "i", "o", "u"] 
+        const str = "bonjour"
+    function countVowel(str) {
+ 
+    let count = 0;
+    for (let letter of str) {
+    if (vowels.includes(letter)) {
+        count++;
+    }
+}
+
+return count
+}
+
+const result = countVowel(str);
+
+console.log(result);*/
+
+      // //fonction qui prend en parametre un mot ou une phrase et qui renvoie le nb de voyelles : methode3 avec indexOf (methode prof)
+      //      const str ="bonjour"
+      //      const voyelle_list = 'aeiouyAEIOUY'
+      //      let cpt = 0
+
+      // function voyelle(str) {
+
+      //      for (let i = 0; i < str.length; i++) {
+      //        if (voyelle_list.indexOf(str[i]) !== -1) {
+      //          cpt += 1
+      //        }
+      //      }
+      //      return cpt
+      //    }
+      //   console.log(voyelle(str))
+
+      // methode de barbara
+      // let phrase = "Le monde est beau";
+      //         let voyelle = "aeiouy";
+      //         let count = 0;
+      // function compte (phrase) {
+
+      //         for (i = 0; i < phrase.length; i++) {
+      //             let index = voyelle.indexOf(phrase[i]);
+      //             //console.log(index);
+      //             if (index !== -1) {
+      //                 count++
+      //             }
+      //         } return count
+
+      //     }
+      //     console.log(compte(phrase))
+
+      // fonction  Écrire une fonction qui prend en paramètre un tableau avec que des chaines de caractère et sortir le mot le plus long
+
+      //FONCTION qui s'apelle lastWord et qui prend en parametre le dernier mot
+
+      /* const str = "Bonjour les amis   "
+  
+         function lastWord (str) {
+            
+            const strLength = str.length -1
+            let i =0 
+            let newWord= ""
+
+            while ( i <  strLength) {  
+                console.log(str[i])
+                
+                i++
+            }
+
+            while (str[i] === " "){
+                console.log(str[i])
+                i--
+            }
+            while (str[i] !== " ") {
+                console.log (str[i])
+                newWord = str[i]+ newWord
+                i--
+            } console.log (newWord)
+ 
+lastword(str)
+
+
+
+
+            //FONCTION qui s'apelle premierMot et qui prend en paramètre le premier mot 
+
+            const str = "   salut les amis"
+            let i = 0 
+            let newWord = ""
+            let newLen = str.length
+
+
+            function premierMot (str) {
+                while ( i< newLen && str[i] == " " ){
+                    console.log(str[i])
+                    i++
+                }
+                while (str[i] != " "){
+                    newWord = newWord+ str[i]
+                    i++
+                } console.log(newWord)
+
+                }
+            
+          
+                premierMot (str)
+
+
+
+
+         // FONCTION qui s'appelle  retourneMot  et qui prend en parametre une chaine de caratere et qui l afiche a l envers
+         
+         
+            str = "salut les amis coucou"
+
+            function retourneMot (str) {
+                let newWord= "";
+                let i = 0;
+                strLength = str.length-1
+                while (i< strLength){
+                    console.log(strLength)
+                    i++
+                }
+
+                while (i > 0 ) {
+                    i--
+                    newWord = newWord + str[i]
+                    
+                }
+                console.log(newWord)
+
+
+            }
+
+     retourneMot (str)
+
+
+
+
+
+//     FONCTION qui retourne une lettre sur 2 en majuscules
+
+
+    
+    
+            
+           const str = "abcdefghijklmnopqrstuvwxyz"
+        
+         
+            function alphabetMaj (str){
+
+            let i = 0;
+            let j = 1;
+            let newWord =""
+
+            while ( i < str.length && j< str.length ){
+                newWord = newWord+ (str[i] + str[j].toUpperCase())
+                i+=2;
+                j+=2;
+       
+            }    console.log(newWord)
+
+            }
+
+alphabetMaj (str)
+
+
+
+// FONCTION  QUI APPELLE AlphaMirror
+
+
+/*const str = "abcdefghijklmnopqrstuvwxyz"
+
+function alphaMirror (str){
+    let strLength = str.length;
+
+    console.log (strLength)
+    let i = 0;
+
+
+    
+}
+    
+
+
+}
+
+alphaMirror(str)*/
+
+      // fonction qui affiche 1 str sans les doublons
+
+      /*const str  = "salutlesamis"
+        
+        let newSentence = "";
+        let i = 0 
+        let j = 0 
+        
+        function withoutDoubles (str){
+        newSentence = newSentence + str[0];
+            for (i = 0; i < str.length; i++){
+                // console.log('premiere boucle',[i])
+        
+                // for (j =0; j< str.length; j++){
+                    // console.log('deuxieme',[j])
+        
+                    // if (str[i] == str[j]){
+                        
+        
+                        
+                    
+                    }    console.log()
+                
+                }
+            
+            }
+        
+        }
+        
+        
+           withoutDoubles(str)idee 1 non fini
+        
+        
+        const str = "salutlesamis"
+        let newSentence = ""
+        newSentence = newSentence + str [0]
+        let i = 1
+        let j = 0 
+        
+        
+        for ( i = 1;  i <str.length; i++) {
+        
+            for (j =0; j < str.length; j++){
+        
+        
+                    if (str[i] != str[j]) {
+                        newSentence = newSentence + str[i]
+                       
+            }
+          
+        }  console.log(newSentence)
+        }
+        
+        
+        // /formules sans doubles corrigé de Mathieu */
+
+      // qui prend deux chaînes et affiche, sans double, les caractères qui apparaissent dans l'une ou l'autre des chaînes.
+      // EX : str:1 "zpadinton" - str:2 “paqefwtdjetyiytjneytjoeyjnejeyj” - résultat : "zpadintoqefwjy"
+
+      /*  function quiNeDoublePasLesCaracteres(str1, str2) {
+              let fusionStr = str1 + str2
+              let str3 = ""
+              str3 += fusionStr[0]
+          
+          
+              
+              for (let i = 0 ; i < fusionStr.length ; i++) {
+                  let egalite = true;
+           
+                  for (let j = 0 ; j < str3.length ; j++) {
+                    if (fusionStr[i] === str3[j]) {
+                          egalite = false;
+                      }
+                  }
+                  if (egalite == true) {
+                      str3 += fusionStr[i] // str3 = str3 + fusionStr[i]
+                  }
+              }
+              console.log("Les strings '", str1, "' et' ", str2, "' deviennent :", str3)
+          }
+          quiNeDoublePasLesCaracteres('salut les amis','coucou')*/
+
+      // corrigé de lotfi
+      /*const str = "coucou"
+    
+         function removeDuplicates(str) {
+        // Used as index in the modified string
+        let n = str.length
+        // Traverse through all characters
+        let res = ''
+        let a
+        for (a = 0; a < n; a++) {
+            
+          // Check if str[i] is present before it
+          let j
+          for (j = a + 1; j < n; j++) {
+              console.log(j)
+            if (str[a] == str[j]) break
+          }
+          // If not present, then add it to
+          // result.
+          if (j == n) {
+            res = res + str[a]
+          }
+    
+        }
+    
+        return res
+    
+    }*/
+
+      // fonction nombres premiers  : fonction qui prend en parametre des nombres et qui renvoient false ou true si c'est un nb premier ou pas
+      //  Nombre premier : nombre divisible par 1 ou par lui meme : 3 5 7 ...
+
+      // function  nombrePremier (num){
+
+      //  let egalite = false
+
+      //     if (num == 2){
+      //         egalite = true
+      //     } else if ( num %2 != 0 ){
+      //         egalite = true
+
+      //     } else {
+      //         egalité = false
+      //     }
+      //     console.log(egalite)
+      // }
+
+      // nombrePremier(81)
+
+      // function nbrPremier(nbr) {
+      //     let resultat = true
+
+      //         if (nbr === 0 || nbr === 1){
+      //             resultat= false;
+      //         }else if (nbr === 2 ){
+      //             resultat= true;
+      //         }else{
+      //            for(let i = 3; i < nbr; i++)
+      //             if (nbr %i == 0){
+      //             resultat = false;
+
+      //         }
+      //     }
+      //     console.log(resultat)
+      //   }
+
+      // console.log(nbrPremier(9));
+
+      // function nbPremier2(nbr){
+
+      //      for (i =2; i<nbr; i++){
+      //      if (nbr %i ===0){
+      //      return false
+      //      return true
+      //      }
+
+      //     }
+      // }
+      // console.log(nbPremier2(9))
+
+   
+
+      // Écrire une fonction qui renvoie la racine carrée entière d’un nombre si elle existe, 0 si la racine carrée n’est pas entière.
+
+      /*let i
+        let egalite = true
+        let num
+        
+        function racineCarre (num) {
+            if ( num %Math.sqrt(num) == 0){
+            egalite = true
+            }else {
+            egalite = 0
+        }
+        console.log(egalite)
+        }
+        
+        
+        racineCarre(25)
+        */
+
+      // formule racine carre avec boucles
+
+      // function racineCarre (num){
+
+      //     for (let i=1; i<= num; i++)
+      //       if (i * i == num )
+      //             return i;
+      //             return 0
+
+      // }
+      // console.log(racineCarre(9))
+
+      // function test(nbr) {
+
+      //     let res = null
+      //     for (let i=1; i<= nbr/2; i++){
+
+      //       if ((i*i) === nbr ) {
+      //           console.log("ok")
+      //           return true
+      //       }
+
+      //     }
+      //     return 0
+
+      // }
+
+      // console.log('test',test(81))
+
+      // fonction puissance
+
+      // function puissance(num,puiss) {
+      //   let resultat = 1
+      //   for (let i = 0; i < puiss; i++)
+      //     resultat *= num;
+      //   return resultat;
+
+      // }
+
+      // console.log(puissance(2, 2));
+
+      // iterative factorial Écrire une fonction itérative qui renvoie un nombre.
+      //  Ce nombre est le résultat de l’opération factorielle à partir du nombre passé en paramètre.
+      // • En cas d’erreur, la fonction devra retourner 0. • Elle devra être prototypée de la façon suivante :
+
+      // function factorial(num )
+      // {
+      //   let resultat  = 1;
+      //   for ( let i =1; i<=num ; i++ ){
+      //     resultat *= i;
+      //   }
+      //   return resultat;
+      // }
+      // console.log(factorial(15))
+
+      //  fonction PRIME NEXT
+      // Écrire une fonction qui renvoie le nombre premier immédiatement supérieur ou égal au nombre passé en paramètre
+
+      // function primeNext (num){
+      //     let resultat = 0
+
+      //     for (let i= 1; i<num; i++){
+      //     if (num == 2){
+      //         resultat = num;
+      //     } else if (num %2 != 0 ){
+      //         resultat = num;
+      //         return num
+      //     }
+      // }
+
+      //     // console.log(resultat)
+      // }
+
+      // console.log(primeNext(3));
+
+      // function  nombrePremier (num){
+
+      //     if ( num %2 != 0 ){
+      //         return num
+
+      //     } else {
+      //       num++
+
+      //     }
+      //      return num+1
+
+      // }
+      // console.log(nombrePremier(9))
+
+      // function nbrPremier(nbr) {
+      //   for(let i = 2; i < nbr; i++)
+      //     if(nbr%i === 0)
+      //     return false;
+      //     return true;
+      // }
+      // // console.log(nbrPremier(9));
+
+      // function primeNext (num){
+      //     let resultat = 0
+
+      //     for (let i= 2; i<num; i++) {
+      //         if (num %2 != 0 ){
+      //             resultat = num;
+      //             return num
+
+      //         }  else {
+      //         num ++
+      //             nbrPremier(num)
+
+      //         }
+
+      //     }
+      //     return num
+      // }
+      // console.log(primeNext(9));
+
+      // fonction factorielle de maniere itérative
+
+      // function factorial(num )
+      // {
+      //   let resultat  = 1;
+      //   for ( let i =1; i<=num ; i++ ){
+      //     resultat *= i;
+      //   }
+      //   return resultat;
+      // }
+      // console.log(factorial(1))
+
+      // // // fonction factorielle de maniere recursive
+
+      // function factorial2(num){
+      //     if (num === 0 ){
+      //         return 1
+      //     } else return num * factorial(num-1)
+
+      // }
+      // console.log(factorial2(1))
+
+      // fonction recursive : les suites de fibonacci
+
+    //   function fibonacci(num){
+    //       if (num === 0 ){
+    //           return 0;
+    //       }else if (num === 1){
+    //       return 1;
+    //       }
+    //       else {
+    //           return fibonacci (num-1) + fibonacci(num-2)
+    //         }
+
+    //       }
+    //   console.log(fibonacci(10))
+
+    //   function fibonacci (num){
+
+    //       if (num=== 0){
+    //           return 0;
+    //       } else if (num ===1){
+    //           return 1;
+    //       }else
+    //       return fibonacci(num-1) + fibonacci(num-2)
+
+    //   }
+    //   console.log(fibonacci(10));
+
+
+      // console.log (factorial(4))
+
+    //   function factorielle(num){
+    //     let resultat = 1;
+    //       for (let i=1; i<= num; i++){
+    //        resultat = resultat * i
+    //       }return resultat
+    //   }
+    //   console.log(factorielle(5))
+
+
+    function factorial (num){
+          if (num === 0){
+              return 1;
+          } else {
+              return factorial(num-1) * num
+              }
+
+      }
+      
+    //   fonction pgcd en iterative
+
+    // function pgcd(num1,num2){
+    
+    // let reste
+    //   while(reste !=0){
+    //       if (num1>num2){
+    //         let reste = num1%num2
+    //         if (reste !=0){
+    //             num1= num2
+    //             num2= reste
+    //     console.log(reste)
+    //         }
+    //       }
+    //   }
+    // }
+    // console.log(pgcd(561,357))
+
+
+// fonction en recursive
+
+let reste 
+    function pgcd2 (num1, num2){
+        if (reste !=0){
+            reste = num1% num2
+            num1 = num2
+            num2= reste
+            
+        }else {
+            return pgcd2(num2)% pgcd2(reste)
+        }
+        console.log(reste)
+    } 
+    
+
+
+
+    console.log(pgcd2(561,357))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     var gcd = function(a, b) {
+//     if ( ! b) {
+//         return a;
+//     }
+
+//     return gcd(b, a % b);
+// };
+// console.log(gcd(525, 390));
+
+    </script>
+  </head>
+
+  <body></body>
+</html>

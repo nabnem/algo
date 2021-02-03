@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+   // Écrire une fonction qui renvoie la racine carrée entière d’un nombre si elle existe, 0 si la racine carrée n’est pas entière.
+
+      let i
+        let egalite = true
+        let num
+        
+        function racineCarre (num) {
+            if ( num %Math.sqrt(num) == 0){
+            egalite = true
+            }else {
+            egalite = 0
+        }
+        console.log(egalite)
+        }
+        
+        
+        racineCarre(25)
+        
+
+      // formule racine carre avec boucles
+
+      // function racineCarre (num){
+
+      //     for (let i=1; i<= num; i++)
+      //       if (i * i == num )
+      //             return i;
+      //             return 0
+
+      // }
+      // console.log(racineCarre(9))
+
+      
+      // function test(nbr) {
+
+      //     let res = null
+      //     for (let i=1; i<= nbr/2; i++){
+
+      //       if ((i*i) === nbr ) {
+      //           console.log("ok")
+      //           return true
+      //       }
+
+      //     }
+      //     return 0
+
+      // }
+
+      // console.log('test',test(81))
+
+
+
+</script>
+</head>
+
+<body></body>
+</html>

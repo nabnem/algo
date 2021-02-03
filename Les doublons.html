@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+     // fonction qui affiche 1 str sans les doublons
+
+      /*const str  = "salutlesamis"
+        
+        let newSentence = "";
+        let i = 0 
+        let j = 0 
+        
+        function withoutDoubles (str){
+        newSentence = newSentence + str[0];
+            for (i = 0; i < str.length; i++){
+                // console.log('premiere boucle',[i])
+        
+                // for (j =0; j< str.length; j++){
+                    // console.log('deuxieme',[j])
+        
+                    // if (str[i] == str[j]){
+                        
+        
+                        
+                    
+                    }    console.log()
+                
+                }
+            
+            }
+        
+        }
+        
+           withoutDoubles(str)idee 1 non fini
+        
+        
+        const str = "salutlesamis"
+        let newSentence = ""
+        newSentence = newSentence + str [0]
+        let i = 1
+        let j = 0 
+        
+        
+        for ( i = 1;  i <str.length; i++) {
+        
+            for (j =0; j < str.length; j++){
+        
+        
+                    if (str[i] != str[j]) {
+                        newSentence = newSentence + str[i]
+                       
+            }
+          
+        }  console.log(newSentence)
+        }
+        
+        
+        // /formules sans doubles corrigé de Mathieu */
+
+      // qui prend deux chaînes et affiche, sans double, les caractères qui apparaissent dans l'une ou l'autre des chaînes.
+      // EX : str:1 "zpadinton" - str:2 “paqefwtdjetyiytjneytjoeyjnejeyj” - résultat : "zpadintoqefwjy"
+
+      /*  function quiNeDoublePasLesCaracteres(str1, str2) {
+              let fusionStr = str1 + str2
+              let str3 = ""
+              str3 += fusionStr[0]
+          
+          
+              
+              for (let i = 0 ; i < fusionStr.length ; i++) {
+                  let egalite = true;
+           
+                  for (let j = 0 ; j < str3.length ; j++) {
+                    if (fusionStr[i] === str3[j]) {
+                          egalite = false;
+                      }
+                  }
+                  if (egalite == true) {
+                      str3 += fusionStr[i] // str3 = str3 + fusionStr[i]
+                  }
+              }
+              console.log("Les strings '", str1, "' et' ", str2, "' deviennent :", str3)
+          }
+          quiNeDoublePasLesCaracteres('salut les amis','coucou')*/
+
+      // corrigé de lotfi
+      const str = "coucou"
+    
+         function removeDuplicates(str) {
+        // Used as index in the modified string
+        let n = str.length
+        // Traverse through all characters
+        let res = ''
+        let a
+        for (a = 0; a < n; a++) {
+            
+          // Check if str[i] is present before it
+          let j
+          for (j = a + 1; j < n; j++) {
+              console.log(j)
+            if (str[a] == str[j]) break
+          }
+          // If not present, then add it to
+          // result.
+          if (j == n) {
+            res = res + str[a]
+          }
+    
+        }
+    
+        return res
+    
+    }
+
+
+</script>
+</head>
+
+<body></body>
+</html>

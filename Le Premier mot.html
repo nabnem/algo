@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+   //FONCTION qui s'apelle premierMot et qui prend en paramètre le premier mot 
+
+   const str = "   salut les amis"
+            let i = 0 
+            let newWord = ""
+            let newLen = str.length
+
+
+            function premierMot (str) {
+                while ( i< newLen && str[i] == " " ){
+                    console.log(str[i])
+                    i++
+                }
+                while (str[i] != " "){
+                    newWord = newWord+ str[i]
+                    i++
+                } console.log(newWord)
+
+                }
+            
+          
+                premierMot (str)
+
+
+
+</script>
+</head>
+
+<body></body>
+</html>

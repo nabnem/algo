@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+//FONCTION qui s'apelle lastWord et qui prend en parametre le dernier mot
+
+      const str = "Bonjour les amis   "
+  
+         function lastWord (str) {
+            
+            const strLength = str.length -1
+            let i =0 
+            let newWord= ""
+
+            while ( i <  strLength) {  
+                console.log(str[i])
+                
+                i++
+            }
+
+            while (str[i] === " "){
+                console.log(str[i])
+                i--
+            }
+            while (str[i] !== " ") {
+                console.log (str[i])
+                newWord = str[i]+ newWord
+                i--
+            } console.log (newWord)
+        }
+
+        
+lastword(str)
+
+
+
+
+
+</script>
+</head>
+
+<body></body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+<script>
+
+    
+//   fonction pgcd en iterative
+
+    function pgcd(num1,num2){
+    
+    let reste
+      while(reste !=0){
+          if (num1>num2){
+            let reste = num1%num2
+            if (reste !=0){
+                num1= num2
+                num2= reste
+        console.log(reste)
+            }
+          }
+      }
+    }
+    console.log(pgcd(561,357))
+
+
+
+
+
+     
+
+
+    </script>
+  </head>
+
+  <body></body>
+</html>
+
